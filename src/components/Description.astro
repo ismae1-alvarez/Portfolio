@@ -1,0 +1,43 @@
+---
+  import Profile from '../../public/img/profile.png';
+  import { Image } from 'astro:assets';
+---
+
+<main class="grid  md:flex my-5 relative pl-10 py-10 bg-first-color rounded-md gap-10 items-center ">
+    <section class="sticky w-fit h-full flex items-center   justify-center mx-auto">
+        <div class="absolute w-full h-full bg-second-color rounded-full blur -z-10 "></div>
+        <div class="relative bg-second-color rounded-full flex overflow-hidden">
+            <Image 
+                src={Profile} 
+                alt='profile' 
+                loading="eager"
+                class=''
+                />
+        </div>
+    </section>
+
+    <section class="font-sans  md:w-2/3 flex flex-col text-center md:text-start">
+        <div class="flex flex-col gap-2">        
+            <h2 class="font-bold text-3xl ">
+                About <span class="text-second-color">Me</span>  
+            </h2>
+            <div class="grid gap-3">
+                <h4 class="text-start text-2xl">
+                    Fronted Developer
+                </h4>
+                <p class="text-sm  text-start ">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                </p>
+            </div>
+        </div>
+
+        <div class="sticky w-fit h-fit flex items-center mt-5 mx-auto md:mx-0">
+            <div class=" w-full h-full absolute blur bg-second-color -z-10 mt-5 p-3  rounded-xl "></div>
+            <button class="flex items-center bg-second-color font-bold rounded-xl mt-5 p-3" type="button">
+                Download CV
+            </button>
+        </div>
+
+    </section>
+
+</main>
